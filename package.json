@@ -13,11 +13,16 @@
   "license": "ISC",
   "author": "rishi",
   "type": "commonjs",
-  "main": "App.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "parcel index.html"
   },
   "devDependencies": {
     "parcel": "^2.16.3"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "reactdom": "^2.0.0"
   }
 }
