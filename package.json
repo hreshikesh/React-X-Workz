@@ -1,0 +1,23 @@
+{
+  "name": "react-x-workz",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/hreshikesh/React-X-Workz#readme",
+  "bugs": {
+    "url": "https://github.com/hreshikesh/React-X-Workz/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hreshikesh/React-X-Workz.git"
+  },
+  "license": "ISC",
+  "author": "rishi",
+  "type": "commonjs",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.3"
+  }
+}
