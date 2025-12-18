@@ -750,7 +750,7 @@ const heading2 = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
     children: [
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
             id: "heading2Id",
-            children: "Hello this is heading 2 created using JSX"
+            children: "Hello this is heading 2 created using JSX(JavScript XML)"
         }, void 0, false, {
             fileName: "App.js",
             lineNumber: 21,
