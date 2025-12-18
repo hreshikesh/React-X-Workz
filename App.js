@@ -15,8 +15,18 @@ const heading=React.createElement("div",{id:"container1Id"},
 
 )
 
+
+const heading2=(
+    <div id="container2Id">
+        <h1 id="heading2Id">Hello this is heading 2 created using JSX</h1>
+        <a id="routing2Id" href="https://www.bing.com">Click Here to go to Bing</a>
+    </div>
+);
+
 console.log(heading);
+console.log(heading2);
 
 
 rootElement.render(heading);
+rootElement.render(heading2);
 
