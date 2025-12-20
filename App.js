@@ -2,31 +2,41 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 
-const rootElement=ReactDOM.createRoot(document.getElementById("root"))
+const rootElement = ReactDOM.createRoot(document.getElementById("root"))
 
-const heading=React.createElement("div",{id:"container1Id"},
-    React.createElement("h1",{id:"heading1Id"},"Hello this is a react heading element"),
-    React.createElement("a",{id:"routingId",href:"https://www.google.com"},"Click Here to to go to google"),
-    React.createElement("button",{id:"btnId"},"Click Me"),
-    React.createElement("img",{id:"imageId",src:"https://picsum.photos/600/400"}),
-    React.createElement("div",{id:"paragraphContainerId"},
-        React.createElement("p",{id:"paragraphId"},"THis is paragraph in a div")
+
+
+
+function Title() {
+    return(
+    <div id="titleContainerId">
+        <nav>
+            <h3>Heading for my webpage</h3>
+        </nav>
+    </div>
     )
+}
 
-)
+const styles= {
+    backgroundColor: "red",
+    color: "black"
+};
 
-
-const heading2=(
-    <div id="container2Id">
-        <h1 id="heading2Id">Hello this is heading 2 created using JSX(JavScript XML)</h1>
-        <a id="routing2Id" href="https://www.bing.com">Click Here to go to Bing</a>
+const Heading2 = () => (
+    <div>
+        <Title />
+        <div id="container2Id" style={styles}>
+            <h1 id="heading2Id">Hello this is heading 2 created using JSX(JavScript XML)</h1>
+            <a id="routing2Id" href="https://www.bing.com">Click Here to go to Bing</a>
+        </div>
     </div>
 );
 
-console.log(heading);
-console.log(heading2);
+
+console.log(Heading2);
+console.log(<Title/>)
 
 
-rootElement.render(heading);
-rootElement.render(heading2);
+
+rootElement.render(<Heading2 />);
 

@@ -207,11 +207,11 @@
       });
     }
   }
-})({"8ZHAc":[function(require,module,exports,__globalThis) {
+})({"icAAj":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 63836;
+var HMR_SERVER_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -728,53 +728,88 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
 const rootElement = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-const heading = /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
-    id: "container1Id"
-}, /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
-    id: "heading1Id"
-}, "Hello this is a react heading element"), /*#__PURE__*/ (0, _reactDefault.default).createElement("a", {
-    id: "routingId",
-    href: "https://www.google.com"
-}, "Click Here to to go to google"), /*#__PURE__*/ (0, _reactDefault.default).createElement("button", {
-    id: "btnId"
-}, "Click Me"), /*#__PURE__*/ (0, _reactDefault.default).createElement("img", {
-    id: "imageId",
-    src: "https://picsum.photos/600/400"
-}), /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
-    id: "paragraphContainerId"
-}, /*#__PURE__*/ (0, _reactDefault.default).createElement("p", {
-    id: "paragraphId"
-}, "THis is paragraph in a div")));
-const heading2 = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-    id: "container2Id",
-    children: [
-        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            id: "heading2Id",
-            children: "Hello this is heading 2 created using JSX(JavScript XML)"
+function Title() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: "titleContainerId",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: "Heading for my webpage"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 14,
+                columnNumber: 13
+            }, this)
         }, void 0, false, {
             fileName: "App.js",
-            lineNumber: 21,
+            lineNumber: 13,
             columnNumber: 9
-        }, undefined),
-        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-            id: "routing2Id",
-            href: "https://www.bing.com",
-            children: "Click Here to go to Bing"
-        }, void 0, false, {
-            fileName: "App.js",
-            lineNumber: 22,
-            columnNumber: 9
-        }, undefined)
-    ]
-}, void 0, true, {
+        }, this)
+    }, void 0, false, {
+        fileName: "App.js",
+        lineNumber: 12,
+        columnNumber: 5
+    }, this);
+}
+_c = Title;
+const styles = {
+    backgroundColor: "red",
+    color: "black"
+};
+const Heading2 = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 27,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "container2Id",
+                style: styles,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        id: "heading2Id",
+                        children: "Hello this is heading 2 created using JSX(JavScript XML)"
+                    }, void 0, false, {
+                        fileName: "App.js",
+                        lineNumber: 29,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        id: "routing2Id",
+                        href: "https://www.bing.com",
+                        children: "Click Here to go to Bing"
+                    }, void 0, false, {
+                        fileName: "App.js",
+                        lineNumber: 30,
+                        columnNumber: 13
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "App.js",
+                lineNumber: 28,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 26,
+        columnNumber: 5
+    }, undefined);
+_c1 = Heading2;
+console.log(Heading2);
+console.log(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 20,
-    columnNumber: 5
-}, undefined);
-console.log(heading);
-console.log(heading2);
-rootElement.render(heading);
-rootElement.render(heading2);
+    lineNumber: 37,
+    columnNumber: 13
+}, undefined));
+rootElement.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Heading2, {}, void 0, false, {
+    fileName: "App.js",
+    lineNumber: 41,
+    columnNumber: 20
+}, undefined));
+var _c, _c1;
+$RefreshReg$(_c, "Title");
+$RefreshReg$(_c1, "Heading2");
 
   $parcel$ReactRefreshHelpers$4931.postlude(module);
 } finally {
@@ -19743,6 +19778,6 @@ module.exports = require("ee51401569654d91");
     };
 })();
 
-},{"58362d9d82be395f":"jMk1U"}]},["8ZHAc","blcJa"], "blcJa", "parcelRequire9bb2", {}, null, null, "http://localhost:63836")
+},{"58362d9d82be395f":"jMk1U"}]},["icAAj","blcJa"], "blcJa", "parcelRequire9bb2", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=React-X-Workz.cb65f72e.js.map
