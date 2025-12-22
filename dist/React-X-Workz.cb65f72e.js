@@ -728,88 +728,325 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
 const rootElement = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-function Title() {
+const NavBar = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        id: "titleContainerId",
+        className: "navbar-container",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: "Heading for my webpage"
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 14,
-                columnNumber: 13
-            }, this)
-        }, void 0, false, {
+            className: "navbar",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "logo",
+                    src: "https://static.vecteezy.com/system/resources/previews/053/762/082/non_2x/food-delivery-catering-fast-food-logo-icon-free-vector.jpg",
+                    alt: "Logo"
+                }, void 0, false, {
+                    fileName: "App.js",
+                    lineNumber: 14,
+                    columnNumber: 17
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                    className: "title",
+                    children: "Food Delivery"
+                }, void 0, false, {
+                    fileName: "App.js",
+                    lineNumber: 15,
+                    columnNumber: 17
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    className: "menu",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Home"
+                        }, void 0, false, {
+                            fileName: "App.js",
+                            lineNumber: 17,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "About Us"
+                        }, void 0, false, {
+                            fileName: "App.js",
+                            lineNumber: 18,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Contact"
+                        }, void 0, false, {
+                            fileName: "App.js",
+                            lineNumber: 19,
+                            columnNumber: 21
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "App.js",
+                    lineNumber: 16,
+                    columnNumber: 17
+                }, undefined)
+            ]
+        }, void 0, true, {
             fileName: "App.js",
             lineNumber: 13,
-            columnNumber: 9
-        }, this)
+            columnNumber: 13
+        }, undefined)
     }, void 0, false, {
         fileName: "App.js",
         lineNumber: 12,
-        columnNumber: 5
-    }, this);
-}
-_c = Title;
-const styles = {
-    backgroundColor: "red",
-    color: "black"
+        columnNumber: 9
+    }, undefined);
 };
-const Heading2 = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+_c = NavBar;
+const FoodDetails = (props)=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "food-image",
+                src: props.foodImage,
+                alt: "Food Image"
+            }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 27,
+                lineNumber: 30,
                 columnNumber: 9
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                id: "container2Id",
-                style: styles,
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        id: "heading2Id",
-                        children: "Hello this is heading 2 created using JSX(JavScript XML)"
-                    }, void 0, false, {
-                        fileName: "App.js",
-                        lineNumber: 29,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        id: "routing2Id",
-                        href: "https://www.bing.com",
-                        children: "Click Here to go to Bing"
-                    }, void 0, false, {
-                        fileName: "App.js",
-                        lineNumber: 30,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, void 0, true, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "restaurant-name",
+                children: props.restaurantName
+            }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 28,
+                lineNumber: 31,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "ratings",
+                children: props.ratings
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 32,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "location",
+                children: props.location
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 33,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "food-description",
+                children: props.foodDescription
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 34,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 26,
+        lineNumber: 29,
         columnNumber: 5
     }, undefined);
-_c1 = Heading2;
-console.log(Heading2);
-console.log(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
+};
+_c1 = FoodDetails;
+const Search = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Welcome to Food Delivery App"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 43,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                    className: "form-container",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "text",
+                            placeholder: "Search for food..."
+                        }, void 0, false, {
+                            fileName: "App.js",
+                            lineNumber: 46,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            type: "submit",
+                            children: "Search"
+                        }, void 0, false, {
+                            fileName: "App.js",
+                            lineNumber: 47,
+                            columnNumber: 21
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "App.js",
+                    lineNumber: 45,
+                    columnNumber: 17
+                }, undefined)
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 44,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 42,
+        columnNumber: 9
+    }, undefined);
+};
+_c2 = Search;
+const AppLayout = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(NavBar, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 58,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Search, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 59,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "card-container",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(FoodDetails, {
+                        foodImage: "https://recipesblob.oetker.in/assets/d8a4b00c292a43adbb9f96798e028f01/1272x764/pizza-pollo-arrostojpg.webp",
+                        restaurantName: "Pizza Palace",
+                        ratings: "4.5 stars",
+                        location: "123 Main St, Cityville",
+                        foodDescription: "Delicious pepperoni pizza with fresh ingredients."
+                    }, void 0, false, {
+                        fileName: "App.js",
+                        lineNumber: 61,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(FoodDetails, {
+                        foodImage: "https://rakskitchen.net/wp-content/uploads/2013/08/9634876480_20d7ac8196_o.jpg",
+                        restaurantName: "Udupi Vihara",
+                        ratings: "4.25 stars",
+                        location: "1st Main Road ,Udupi",
+                        foodDescription: "South Indian Food."
+                    }, void 0, false, {
+                        fileName: "App.js",
+                        lineNumber: 68,
+                        columnNumber: 14
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(FoodDetails, {
+                        foodImage: "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20200825162617/iStock-980462262.jpg",
+                        restaurantName: "Machli",
+                        ratings: "4.5 stars",
+                        location: "Airport Road, Mangalore",
+                        foodDescription: "Seafood Specialties."
+                    }, void 0, false, {
+                        fileName: "App.js",
+                        lineNumber: 75,
+                        columnNumber: 14
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(FoodDetails, {
+                        foodImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5s9iRJd6qbAblgaIm2z0Nh0bTPnNYUJEkVg&s",
+                        restaurantName: "Dominos",
+                        ratings: "4 stars",
+                        location: "4th Main Road,Mysore",
+                        foodDescription: "Tasty Pizzas and Sides."
+                    }, void 0, false, {
+                        fileName: "App.js",
+                        lineNumber: 82,
+                        columnNumber: 14
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(FoodDetails, {
+                        foodImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTkaFlADmQCD6JkXwM3nJZbgRiynKLZMgsKw&s",
+                        restaurantName: "KFC",
+                        ratings: "4.5 stars",
+                        location: "Nexus Mall, Bangalore",
+                        foodDescription: "Fried Chicken and More."
+                    }, void 0, false, {
+                        fileName: "App.js",
+                        lineNumber: 89,
+                        columnNumber: 14
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(FoodDetails, {
+                        foodImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu4UbxnY6tU-fR_dQXCn57rb4CQnKdqBWnpQ&s",
+                        restaurantName: "Indian Coffee House",
+                        ratings: "4.1 stars",
+                        location: "Main road , Kasargod",
+                        foodDescription: "Traditional South Indian Coffee and Snacks."
+                    }, void 0, false, {
+                        fileName: "App.js",
+                        lineNumber: 96,
+                        columnNumber: 14
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(FoodDetails, {
+                        foodImage: "https://www.yum.com/wps/wcm/connect/yumbrands/77ac5d27-1357-4792-9953-54b11f5ae7dd/yum-com-24-product-PH.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_5QC4HBC039RJ406SQH4UBH3695-77ac5d27-1357-4792-9953-54b11f5ae7dd-oXSxcXbs",
+                        restaurantName: "Pizza Hut",
+                        ratings: "4 stars",
+                        location: "HOme Groud,Hublic",
+                        foodDescription: "Variety of Pizzas and Italian Dishes."
+                    }, void 0, false, {
+                        fileName: "App.js",
+                        lineNumber: 103,
+                        columnNumber: 14
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(FoodDetails, {
+                        foodImage: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/103705059.jpg?k=9e078265b31ad1815a573da8ed2a665f863e3925e1efd730df703421868a2ada&o=",
+                        restaurantName: "Taj Hotel",
+                        ratings: "5 stars",
+                        location: "MG Road, Bangalore",
+                        foodDescription: "Luxury Dining Experience."
+                    }, void 0, false, {
+                        fileName: "App.js",
+                        lineNumber: 110,
+                        columnNumber: 14
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(FoodDetails, {
+                        foodImage: "https://media.gettyimages.com/id/157774909/photo/frappuccino-beverage-from-starbucks-coffee.jpg?s=612x612&w=gi&k=20&c=a9Yx_2GJ37TfadD-RJvTtb3fQPCFfp-ArjaqEzkULMc=",
+                        restaurantName: "Starbucks",
+                        ratings: "4.5 stars",
+                        location: "Brigade Road, Bangalore",
+                        foodDescription: "Coffee and Beverages."
+                    }, void 0, false, {
+                        fileName: "App.js",
+                        lineNumber: 117,
+                        columnNumber: 14
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(FoodDetails, {
+                        foodImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Vq946lcVAUxxQUS6mfW1jrIzYQggLto6fA&s",
+                        restaurantName: "Mr Bhel Bhandar",
+                        ratings: "4.5 stars",
+                        location: "City Center, Mumbai",
+                        foodDescription: "Famous Bhel Puri and Street Food."
+                    }, void 0, false, {
+                        fileName: "App.js",
+                        lineNumber: 124,
+                        columnNumber: 14
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "App.js",
+                lineNumber: 60,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 57,
+        columnNumber: 9
+    }, undefined);
+};
+_c3 = AppLayout;
+rootElement.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 37,
-    columnNumber: 13
-}, undefined));
-rootElement.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Heading2, {}, void 0, false, {
-    fileName: "App.js",
-    lineNumber: 41,
+    lineNumber: 136,
     columnNumber: 20
 }, undefined));
-var _c, _c1;
-$RefreshReg$(_c, "Title");
-$RefreshReg$(_c1, "Heading2");
+var _c, _c1, _c2, _c3;
+$RefreshReg$(_c, "NavBar");
+$RefreshReg$(_c1, "FoodDetails");
+$RefreshReg$(_c2, "Search");
+$RefreshReg$(_c3, "AppLayout");
 
   $parcel$ReactRefreshHelpers$4931.postlude(module);
 } finally {
