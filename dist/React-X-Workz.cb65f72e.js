@@ -19744,10 +19744,9 @@ const Header = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "logo",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    src: "https://tse4.mm.bing.net/th/id/OIP.xFsfS9DLR3uSusNqNiKBBQHaGQ?pid=Api&P=0&h=180",
-                    style: {
-                        width: 90
-                    }
+                    src: "https://static.vecteezy.com/system/resources/previews/053/762/082/non_2x/food-delivery-catering-fast-food-logo-icon-free-vector.jpg",
+                    alt: "Logo",
+                    width: 70
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
                     lineNumber: 5,
@@ -19776,7 +19775,7 @@ const Header = ()=>{
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "contact"
+                            children: "Contact"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
                             lineNumber: 11,
@@ -19842,9 +19841,9 @@ const Body = ()=>{
                 style: {
                     marginLeft: 180,
                     fontSize: 20,
-                    paddingBottom: 10
+                    marginBottom: 30
                 },
-                children: "Taste these delectable classics, delectable biryanis to make your day."
+                children: "Delicious Biryani restaurants near you"
             }, void 0, false, {
                 fileName: "src/components/Body.js",
                 lineNumber: 8,
