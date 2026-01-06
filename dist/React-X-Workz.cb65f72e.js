@@ -19737,7 +19737,14 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
 const Header = ()=>{
+    _s();
+    const [isLoggedIn, setIsLoggedIn] = (0, _react.useState)("login");
+    function handleLogin() {
+        isLoggedIn === "login" ? setIsLoggedIn("logout") : setIsLoggedIn("login");
+    }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header",
         children: [
@@ -19749,12 +19756,12 @@ const Header = ()=>{
                     width: 70
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 5,
+                    lineNumber: 13,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 4,
+                lineNumber: 12,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -19764,41 +19771,57 @@ const Header = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 9,
+                            lineNumber: 17,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "About"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 10,
+                            lineNumber: 18,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Contact"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 11,
+                            lineNumber: 19,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "loginButton",
+                                onClick: handleLogin,
+                                children: isLoggedIn
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 20,
+                                columnNumber: 25
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 20,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 8,
+                    lineNumber: 16,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 7,
+                lineNumber: 15,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 3,
+        lineNumber: 11,
         columnNumber: 9
     }, undefined);
 };
+_s(Header, "43Gl/NrVGgTcd7o079g12JEELy4=");
 _c = Header;
 exports.default = Header;
 var _c;
@@ -19809,7 +19832,7 @@ $RefreshReg$(_c, "Header");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"loQlg":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U"}],"loQlg":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$8a58 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$8a58.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -19823,18 +19846,44 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _restoCard = require("./RestoCard");
 var _restoCardDefault = parcelHelpers.interopDefault(_restoCard);
 var _constants = require("../utility/constants");
+var _react = require("react");
+var _s = $RefreshSig$();
 const Body = ()=>{
+    _s();
+    const [restoList, setRestoList] = (0, _react.useState)((0, _constants.cardApiData));
+    function handleTopRatedClick() {
+        const filteredList = restoList.filter((resto)=>resto.card.card.info.avgRating >= 4.5);
+        setRestoList(filteredList);
+    }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                style: {
-                    marginLeft: 180,
-                    fontSize: 50
-                },
-                children: "Biryani"
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "headingContainer",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        style: {
+                            marginLeft: 12,
+                            fontSize: 50
+                        },
+                        children: "Biryani"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 20,
+                        columnNumber: 19
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "filter-btn",
+                        onClick: ()=>handleTopRatedClick(),
+                        children: "Top Rated Restaurants (above 4.5)"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 21,
+                        columnNumber: 19
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 7,
+                lineNumber: 19,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -19846,32 +19895,33 @@ const Body = ()=>{
                 children: "Delicious Biryani restaurants near you"
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 8,
+                lineNumber: 25,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "resto-card",
-                children: (0, _constants.cardApiData).map((data)=>{
+                children: restoList.map((data)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restoCardDefault.default), {
                         cardData: data
                     }, data.card.card.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 13,
+                        lineNumber: 30,
                         columnNumber: 32
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 10,
+                lineNumber: 27,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 6,
+        lineNumber: 17,
         columnNumber: 9
     }, undefined);
 };
+_s(Body, "dNnd1J1H2VFqIy9oS+O36pijUlE=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -19882,7 +19932,7 @@ $RefreshReg$(_c, "Body");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","./RestoCard":"bfWTJ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../utility/constants":"hkTpU"}],"bfWTJ":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","./RestoCard":"bfWTJ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../utility/constants":"hkTpU","react":"jMk1U"}],"bfWTJ":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$ceae = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$ceae.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
