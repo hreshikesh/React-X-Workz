@@ -1,21 +1,34 @@
 import { cloudinaryImageURL } from "../utility/constants";
 
 const RestoCard = ({ cardData }) => {
-    const { info } = cardData.card.card
+    const info = cardData?.card?.card?.info;
+
+   
+
     return (
         <div className="card">
-            <img src={cloudinaryImageURL + info.cloudinaryImageId} alt="Resto-images"></img>
+            {info.imageId && (
+                <img
+                    src={cloudinaryImageURL + info.imageId}
+                    alt={info.name}
+                />
+            )}
+
             <h3>{info.name}</h3>
 
-            <div className="rating-time">
-                <span className="rating">⭐{info.avgRatingString}</span>
-                <span className="time">⏱️ {info.sla.slaString}</span>
-            </div>
+            <p className="category">{info.category}</p>
 
-            <p className="flavors">{info.cuisines.join(", ")}</p>
-            <p className="location">{info.locality}</p>
+            <p className="price">
+                ₹{(info.price || info.defaultPrice) / 100}
+            </p>
+
+            {info.ratings?.aggregatedRating?.rating && (
+                <p className="rating">
+                    ⭐ {info.ratings.aggregatedRating.rating}
+                </p>
+            )}
         </div>
-    )
-}
+    );
+};
 
 export default RestoCard;

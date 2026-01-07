@@ -1,9 +1,21 @@
 import RestoCard from "./RestoCard";
-import { cardApiData } from "../utility/constants";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const Body = () => {
-    const [restoList, setRestoList] = useState(cardApiData);
+    const [restoList, setRestoList] = useState([]);
+
+    useEffect(()=>{
+        fetchData();
+    },[])
+    
+    const fetchData = async () => {
+        const data = await fetch(
+           "https://www.swiggy.com/dapi/restaurants/search/v3?lat=12.97530&lng=77.59100&str=biriyani&trackingId=13b3870b-d900-f4a5-8e7b-b3fbe41df911&submitAction=ENTER&queryUniqueId=a6654eb9-f868-5c4e-43e3-4bbad42cc642");
+        const result = await data.json();
+        console.log(result.data.cards[1].groupedCard.cardGroupMap.DISH.cards);
+        setRestoList(result.data.cards[1].groupedCard.cardGroupMap.DISH.cards);
+        
+    }
 
     function handleTopRatedClick() {
      
@@ -26,10 +38,12 @@ const Body = () => {
             </p>
             <div className="resto-card">
                 {
-                    restoList.map(data => {
+                    restoList.map((data,index) => {
+                        if(index>0){
                         return <RestoCard cardData={data}
                             key={data.card.card.info.id}
                         ></RestoCard>
+                        }
                     })
                 }
             </div>

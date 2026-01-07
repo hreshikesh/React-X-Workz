@@ -19845,12 +19845,20 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _restoCard = require("./RestoCard");
 var _restoCardDefault = parcelHelpers.interopDefault(_restoCard);
-var _constants = require("../utility/constants");
 var _react = require("react");
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
-    const [restoList, setRestoList] = (0, _react.useState)((0, _constants.cardApiData));
+    const [restoList, setRestoList] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        fetchData();
+    }, []);
+    const fetchData = async ()=>{
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/search/v3?lat=12.97530&lng=77.59100&str=biriyani&trackingId=13b3870b-d900-f4a5-8e7b-b3fbe41df911&submitAction=ENTER&queryUniqueId=a6654eb9-f868-5c4e-43e3-4bbad42cc642");
+        const result = await data.json();
+        console.log(result.data.cards[1].groupedCard.cardGroupMap.DISH.cards);
+        setRestoList(result.data.cards[1].groupedCard.cardGroupMap.DISH.cards);
+    };
     function handleTopRatedClick() {
         const filteredList = restoList.filter((resto)=>resto.card.card.info.avgRating >= 4.5);
         setRestoList(filteredList);
@@ -19868,7 +19876,7 @@ const Body = ()=>{
                         children: "Biryani"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 20,
+                        lineNumber: 32,
                         columnNumber: 19
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -19877,13 +19885,13 @@ const Body = ()=>{
                         children: "Top Rated Restaurants (above 4.5)"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 21,
+                        lineNumber: 33,
                         columnNumber: 19
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 19,
+                lineNumber: 31,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -19895,33 +19903,33 @@ const Body = ()=>{
                 children: "Delicious Biryani restaurants near you"
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 25,
+                lineNumber: 37,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "resto-card",
-                children: restoList.map((data)=>{
-                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restoCardDefault.default), {
+                children: restoList.map((data, index)=>{
+                    if (index > 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restoCardDefault.default), {
                         cardData: data
                     }, data.card.card.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 30,
+                        lineNumber: 43,
                         columnNumber: 32
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 27,
+                lineNumber: 39,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 17,
+        lineNumber: 29,
         columnNumber: 9
     }, undefined);
 };
-_s(Body, "dNnd1J1H2VFqIy9oS+O36pijUlE=");
+_s(Body, "WTsUPy1u8NGxzlV/OXjR9TrBTFU=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -19932,7 +19940,7 @@ $RefreshReg$(_c, "Body");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","./RestoCard":"bfWTJ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../utility/constants":"hkTpU","react":"jMk1U"}],"bfWTJ":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","./RestoCard":"bfWTJ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U"}],"bfWTJ":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$ceae = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$ceae.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -19945,76 +19953,59 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _constants = require("../utility/constants");
 const RestoCard = ({ cardData })=>{
-    const { info } = cardData.card.card;
+    const info = cardData?.card?.card?.info;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: (0, _constants.cloudinaryImageURL) + info.cloudinaryImageId,
-                alt: "Resto-images"
+            info.imageId && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: (0, _constants.cloudinaryImageURL) + info.imageId,
+                alt: info.name
             }, void 0, false, {
                 fileName: "src/components/RestoCard.js",
-                lineNumber: 7,
-                columnNumber: 13
+                lineNumber: 11,
+                columnNumber: 17
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: info.name
             }, void 0, false, {
                 fileName: "src/components/RestoCard.js",
-                lineNumber: 8,
+                lineNumber: 17,
                 columnNumber: 13
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "rating-time",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "category",
+                children: info.category
+            }, void 0, false, {
+                fileName: "src/components/RestoCard.js",
+                lineNumber: 19,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "price",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "rating",
-                        children: [
-                            "\u2B50",
-                            info.avgRatingString
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/RestoCard.js",
-                        lineNumber: 11,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "time",
-                        children: [
-                            "\u23F1\uFE0F ",
-                            info.sla.slaString
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/RestoCard.js",
-                        lineNumber: 12,
-                        columnNumber: 17
-                    }, undefined)
+                    "\u20B9",
+                    (info.price || info.defaultPrice) / 100
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestoCard.js",
-                lineNumber: 10,
+                lineNumber: 21,
                 columnNumber: 13
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "flavors",
-                children: info.cuisines.join(", ")
-            }, void 0, false, {
+            info.ratings?.aggregatedRating?.rating && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "rating",
+                children: [
+                    "\u2B50 ",
+                    info.ratings.aggregatedRating.rating
+                ]
+            }, void 0, true, {
                 fileName: "src/components/RestoCard.js",
-                lineNumber: 15,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "location",
-                children: info.locality
-            }, void 0, false, {
-                fileName: "src/components/RestoCard.js",
-                lineNumber: 16,
-                columnNumber: 13
+                lineNumber: 26,
+                columnNumber: 17
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/RestoCard.js",
-        lineNumber: 6,
+        lineNumber: 9,
         columnNumber: 9
     }, undefined);
 };
