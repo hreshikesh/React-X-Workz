@@ -193,3 +193,42 @@ li:hover{
     margin-right: 20px;
 }
 
+.errorBox{
+    text-align: center;
+    margin-top: 100px;
+    background-color: #b11226;
+    color: beige;
+    padding: 10px;
+}
+.errorHeading{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.errorMessage{
+    font-size: 20px;
+}
+.errorContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutContainer{
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #121212;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+.aboutHeading{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.aboutContent{
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    text-align: center;
+    
+}
