@@ -1,9 +1,9 @@
-import Header from "./Header";
+
 
 const AboutPage = () => {
     return (
         <div>
-            <Header />
+          
             <div className="aboutContainer">
                 <h1 className="aboutHeading ">About Us</h1>
                 <p className="aboutContent">We are a modern food delivery platform designed to connect users with their favorite restaurants quickly and effortlessly. Our goal is to make ordering food simple, reliable, and convenient—whether you are craving a quick snack or planning a full meal.
