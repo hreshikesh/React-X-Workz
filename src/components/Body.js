@@ -1,6 +1,7 @@
 import RestoCard from "./RestoCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 const Body = () => {
     const [restoList, setRestoList] = useState([]);
     const [searchText, setSearchText] = useState("");
@@ -9,6 +10,7 @@ const Body = () => {
     useEffect(() => {
         fetchData();
     }, [])
+
 
 
 
@@ -31,7 +33,7 @@ const Body = () => {
     }
 
     function handleTopRatedClick() {
-        const filteredList = restoList.filter((resto) => {
+        const filteredList = filteredRestoList.filter((resto) => {
             const rating = resto?.card?.card?.info?.ratings?.aggregatedRating?.rating;
             return rating >= 4.5;
         });
@@ -68,9 +70,8 @@ const Body = () => {
                 {
                     filteredRestoList.map((data, index) => {
                         if (index > 0) {
-                            return <RestoCard cardData={data}
-                                key={data.card.card.info.id}
-                            ></RestoCard>
+                            return <Link to={`/menu/${data.card.card.info.id}/${data.card.card.info.name}`} key={data.card.card.info.id}><RestoCard cardData={data}
+                            ></RestoCard></Link>
                         }
                     })
                 }

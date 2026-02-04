@@ -5,6 +5,7 @@ import { createBrowserRouter, Outlet } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
 import AboutPage from "./src/components/About";
 import ErrorPage from "./src/components/Error";
+import HotelMenu from "./src/components/HotelMenu";
 
 const AppStructure = function () {
     return (
@@ -28,6 +29,10 @@ const appRouter = createBrowserRouter(
             {
                 path: "/",
                 element: <Body />
+            },{
+                path:"/menu/:id/:name",
+                element:<HotelMenu />
+
             }
             ],
             errorElement: <ErrorPage />
