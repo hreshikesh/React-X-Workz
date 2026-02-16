@@ -312,3 +312,32 @@ li:hover{
     color: #222;
     margin-bottom: 12px;
 }
+
+.formContainer {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #121212;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+.formHeading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}

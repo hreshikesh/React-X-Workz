@@ -736,23 +736,27 @@ var _error = require("./src/components/Error");
 var _errorDefault = parcelHelpers.interopDefault(_error);
 var _hotelMenu = require("./src/components/HotelMenu");
 var _hotelMenuDefault = parcelHelpers.interopDefault(_hotelMenu);
+var _register = require("./src/components/Register");
+var _registerDefault = parcelHelpers.interopDefault(_register);
+var _contact = require("./src/components/Contact");
+var _contactDefault = parcelHelpers.interopDefault(_contact);
 const AppStructure = function() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 13,
+                lineNumber: 15,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 14,
+                lineNumber: 16,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 12,
+        lineNumber: 14,
         columnNumber: 9
     }, this);
 };
@@ -762,7 +766,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppStructure, {}, void 0, false, {
             fileName: "App.js",
-            lineNumber: 24,
+            lineNumber: 26,
             columnNumber: 22
         }, undefined),
         children: [
@@ -770,7 +774,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 27,
+                    lineNumber: 29,
                     columnNumber: 26
                 }, undefined)
             },
@@ -778,7 +782,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 31,
+                    lineNumber: 33,
                     columnNumber: 26
                 }, undefined)
             },
@@ -786,14 +790,33 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/menu/:id/:name",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _hotelMenuDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 34,
+                    lineNumber: 36,
+                    columnNumber: 25
+                }, undefined)
+            },
+            {
+                path: "/register",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _registerDefault.default), {}, void 0, false, {
+                    fileName: "App.js",
+                    lineNumber: 40,
+                    columnNumber: 25
+                }, undefined)
+            },
+            {
+                path: "/contact",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {
+                    title: "Contact Page with counter",
+                    description: "This is the contact page with a list of items."
+                }, void 0, false, {
+                    fileName: "App.js",
+                    lineNumber: 44,
                     columnNumber: 25
                 }, undefined)
             }
         ],
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "App.js",
-            lineNumber: 38,
+            lineNumber: 47,
             columnNumber: 27
         }, undefined)
     }
@@ -803,7 +826,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "App.js",
-    lineNumber: 45,
+    lineNumber: 54,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -814,7 +837,7 @@ $RefreshReg$(_c, "AppStructure");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react-dom/client":"hrvwu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react/jsx-dev-runtime":"dVPUn","./src/components/Header":"3PJ6N","./src/components/Body":"loQlg","react-router-dom":"61z4w","./src/components/About":"bv2mH","./src/components/Error":"8NIKV","./src/components/HotelMenu":"9LUGc"}],"hrvwu":[function(require,module,exports,__globalThis) {
+},{"react-dom/client":"hrvwu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react/jsx-dev-runtime":"dVPUn","./src/components/Header":"3PJ6N","./src/components/Body":"loQlg","react-router-dom":"61z4w","./src/components/About":"bv2mH","./src/components/Error":"8NIKV","./src/components/HotelMenu":"9LUGc","./src/components/Register":"aJAza","./src/components/Contact":"asQvq"}],"hrvwu":[function(require,module,exports,__globalThis) {
 'use strict';
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function') return;
@@ -19848,7 +19871,8 @@ const Header = ()=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                children: "Contact"
+                                to: "/register",
+                                children: "Register"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
                                 lineNumber: 20,
@@ -19860,10 +19884,9 @@ const Header = ()=>{
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "loginButton",
-                                onClick: handleLogin,
-                                children: isLoggedIn
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/contact",
+                                children: "Contact"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
                                 lineNumber: 21,
@@ -19872,6 +19895,21 @@ const Header = ()=>{
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
                             lineNumber: 21,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "loginButton",
+                                onClick: handleLogin,
+                                children: isLoggedIn
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 22,
+                                columnNumber: 25
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 22,
                             columnNumber: 21
                         }, undefined)
                     ]
@@ -27830,6 +27868,575 @@ $RefreshReg$(_c, "HotelMenu");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","react":"jMk1U","../utility/constants":"hkTpU","react-router-dom":"61z4w"}]},["icAAj","blcJa"], "blcJa", "parcelRequire9bb2", {}, null, null, "http://localhost:1234")
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","react":"jMk1U","../utility/constants":"hkTpU","react-router-dom":"61z4w"}],"aJAza":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$abe8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$abe8.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$abe8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
+const Register = ()=>{
+    _s();
+    const [name, setName] = (0, _react.useState)("");
+    const [email, setEmail] = (0, _react.useState)("");
+    const [phone, setPhone] = (0, _react.useState)("");
+    const [password, setPassword] = (0, _react.useState)("");
+    const [age, setAge] = (0, _react.useState)("");
+    const [gender, setGender] = (0, _react.useState)("");
+    const [city, setCity] = (0, _react.useState)("");
+    const [country, setCountry] = (0, _react.useState)("");
+    const [skills, setSkills] = (0, _react.useState)("");
+    const [agree, setAgree] = (0, _react.useState)(false);
+    async function handleSubmit(e) {
+        e.preventDefault();
+        alert(`Name: ${name}, Email: ${email}`);
+        fetch("http://localhost:8080/api/user/save", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                userName: name,
+                userEmail: email,
+                userPhone: phone,
+                userPassword: password,
+                userAge: age,
+                userGender: gender,
+                userCity: city,
+                userCountry: country,
+                userSkills: skills
+            })
+        });
+    }
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "formContainer",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    className: "formHeading",
+                    children: "Register Page"
+                }, void 0, false, {
+                    fileName: "src/components/Register.js",
+                    lineNumber: 43,
+                    columnNumber: 17
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                    onSubmit: handleSubmit,
+                    className: "form",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            children: "Name:"
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 47,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 47,
+                            columnNumber: 41
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "text",
+                            placeholder: "Enter Name",
+                            value: name,
+                            onChange: (e)=>setName(e.target.value)
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 48,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 54,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 54,
+                            columnNumber: 27
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            children: "Email:"
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 57,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 57,
+                            columnNumber: 42
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "email",
+                            placeholder: "Enter Email",
+                            value: email,
+                            onChange: (e)=>setEmail(e.target.value)
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 58,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 64,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 64,
+                            columnNumber: 27
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            children: "Phone:"
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 67,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 67,
+                            columnNumber: 42
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "text",
+                            placeholder: "Enter Phone",
+                            value: phone,
+                            onChange: (e)=>setPhone(e.target.value)
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 68,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 74,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 74,
+                            columnNumber: 27
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            children: "Password:"
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 77,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 77,
+                            columnNumber: 45
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "password",
+                            placeholder: "Enter Password",
+                            value: password,
+                            onChange: (e)=>setPassword(e.target.value)
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 78,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 84,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 84,
+                            columnNumber: 27
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            children: "Age:"
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 87,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 87,
+                            columnNumber: 40
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "number",
+                            placeholder: "Enter Age",
+                            value: age,
+                            onChange: (e)=>setAge(e.target.value)
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 88,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 94,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 94,
+                            columnNumber: 27
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            children: "Gender:"
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 97,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 97,
+                            columnNumber: 43
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "radio",
+                            name: "gender",
+                            value: "Male",
+                            checked: gender === "Male",
+                            onChange: (e)=>setGender(e.target.value)
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 98,
+                            columnNumber: 21
+                        }, undefined),
+                        " Male",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "radio",
+                            name: "gender",
+                            value: "Female",
+                            checked: gender === "Female",
+                            onChange: (e)=>setGender(e.target.value)
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 106,
+                            columnNumber: 21
+                        }, undefined),
+                        " Female",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "radio",
+                            name: "gender",
+                            value: "Other",
+                            checked: gender === "Other",
+                            onChange: (e)=>setGender(e.target.value)
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 115,
+                            columnNumber: 21
+                        }, undefined),
+                        " Other",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 122,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 122,
+                            columnNumber: 27
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            children: "City:"
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 125,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 125,
+                            columnNumber: 41
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "text",
+                            placeholder: "Enter City",
+                            value: city,
+                            onChange: (e)=>setCity(e.target.value)
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 126,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 132,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 132,
+                            columnNumber: 27
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            children: "Country:"
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 135,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 135,
+                            columnNumber: 44
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "text",
+                            placeholder: "Enter Country",
+                            value: country,
+                            onChange: (e)=>setCountry(e.target.value)
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 136,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 142,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 142,
+                            columnNumber: 27
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            children: "Skills:"
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 145,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 145,
+                            columnNumber: 43
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "checkbox",
+                            value: "Java",
+                            onChange: (e)=>setSkills(e.target.value)
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 146,
+                            columnNumber: 21
+                        }, undefined),
+                        " Java",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "checkbox",
+                            value: "Spring Boot",
+                            onChange: (e)=>setSkills(e.target.value),
+                            style: {
+                                marginLeft: "15px"
+                            }
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 152,
+                            columnNumber: 21
+                        }, undefined),
+                        " Spring Boot",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            type: "checkbox",
+                            value: "React",
+                            onChange: (e)=>setSkills(e.target.value),
+                            style: {
+                                marginLeft: "15px"
+                            }
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 159,
+                            columnNumber: 21
+                        }, undefined),
+                        " React",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 165,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 165,
+                            columnNumber: 27
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                    type: "checkbox",
+                                    checked: agree,
+                                    onChange: (e)=>setAgree(e.target.checked)
+                                }, void 0, false, {
+                                    fileName: "src/components/Register.js",
+                                    lineNumber: 169,
+                                    columnNumber: 25
+                                }, undefined),
+                                "\xa0I agree to the Terms & Conditions"
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 168,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 177,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 177,
+                            columnNumber: 27
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            className: "search-btn",
+                            type: "submit",
+                            children: "Register"
+                        }, void 0, false, {
+                            fileName: "src/components/Register.js",
+                            lineNumber: 179,
+                            columnNumber: 21
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Register.js",
+                    lineNumber: 44,
+                    columnNumber: 17
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Register.js",
+            lineNumber: 42,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Register.js",
+        lineNumber: 40,
+        columnNumber: 9
+    }, undefined);
+};
+_s(Register, "t1roLRTsRT0+1uM4qUzQYNJsUZA=");
+_c = Register;
+exports.default = Register;
+var _c;
+$RefreshReg$(_c, "Register");
+
+  $parcel$ReactRefreshHelpers$abe8.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"asQvq":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$34fd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$34fd.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$34fd.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class Contact extends (0, _reactDefault.default).Component {
+    constructor(props){
+        super(props);
+        this.props = props;
+        this.state = {
+            count: 0,
+            increment: 100,
+            decrement: 1
+        };
+    }
+    handleIncrement = ()=>{
+        this.setState({
+            count: this.state.count + this.state.increment
+        });
+    };
+    handleDecrement = ()=>{
+        this.setState({
+            count: this.state.count - this.state.decrement
+        });
+    };
+    render() {
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: "Contact Us"
+                }, void 0, false, {
+                    fileName: "src/components/Contact.js",
+                    lineNumber: 27,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: this.props.title
+                }, void 0, false, {
+                    fileName: "src/components/Contact.js",
+                    lineNumber: 28,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    children: this.props.description
+                }, void 0, false, {
+                    fileName: "src/components/Contact.js",
+                    lineNumber: 29,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    children: [
+                        "Count: ",
+                        this.state.count
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Contact.js",
+                    lineNumber: 30,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: this.handleIncrement,
+                    children: "Increment(100)"
+                }, void 0, false, {
+                    fileName: "src/components/Contact.js",
+                    lineNumber: 31,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: this.handleDecrement,
+                    style: {
+                        marginLeft: 10
+                    },
+                    children: "Decrement(1)"
+                }, void 0, false, {
+                    fileName: "src/components/Contact.js",
+                    lineNumber: 32,
+                    columnNumber: 17
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Contact.js",
+            lineNumber: 26,
+            columnNumber: 13
+        }, this);
+    }
+}
+exports.default = Contact;
+
+  $parcel$ReactRefreshHelpers$34fd.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["icAAj","blcJa"], "blcJa", "parcelRequire9bb2", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=React-X-Workz.cb65f72e.js.map
