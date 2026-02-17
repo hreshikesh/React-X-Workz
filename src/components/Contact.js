@@ -1,4 +1,5 @@
 import React from "react";
+import User from "./User";
 
 class Contact extends React.Component {
     constructor(props) {
@@ -9,8 +10,7 @@ class Contact extends React.Component {
             increment:100,
             decrement:1,
         }
-
-        
+        console.log("This is a parent class constructor") 
     }
 
     handleIncrement = () => {
@@ -30,6 +30,11 @@ class Contact extends React.Component {
                 <h2>Count: {this.state.count}</h2>
                 <button onClick={this.handleIncrement}>Increment(100)</button>
                 <button onClick={this.handleDecrement} style={{marginLeft:10}}>Decrement(1)</button>
+
+                <div>
+                    <h1>User Component</h1>
+                    <User userName={"HrishiKesh"} phone={7827654321} />    
+                </div>
             </div>
         )
     }

@@ -28349,6 +28349,8 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _user = require("./User");
+var _userDefault = parcelHelpers.interopDefault(_user);
 class Contact extends (0, _reactDefault.default).Component {
     constructor(props){
         super(props);
@@ -28358,6 +28360,7 @@ class Contact extends (0, _reactDefault.default).Component {
             increment: 100,
             decrement: 1
         };
+        console.log("This is a parent class constructor");
     }
     handleIncrement = ()=>{
         this.setState({
@@ -28421,6 +28424,29 @@ class Contact extends (0, _reactDefault.default).Component {
                     fileName: "src/components/Contact.js",
                     lineNumber: 32,
                     columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            children: "User Component"
+                        }, void 0, false, {
+                            fileName: "src/components/Contact.js",
+                            lineNumber: 35,
+                            columnNumber: 21
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userDefault.default), {
+                            userName: "HrishiKesh",
+                            phone: 7827654321
+                        }, void 0, false, {
+                            fileName: "src/components/Contact.js",
+                            lineNumber: 36,
+                            columnNumber: 21
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Contact.js",
+                    lineNumber: 34,
+                    columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
@@ -28433,6 +28459,70 @@ class Contact extends (0, _reactDefault.default).Component {
 exports.default = Contact;
 
   $parcel$ReactRefreshHelpers$34fd.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./User":"gT672","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"gT672":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$1070 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$1070.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$1070.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class User extends (0, _reactDefault.default).Component {
+    constructor(){
+        super();
+        console.log("child constructor");
+    }
+    render() {
+        const { userName, phone } = this.props;
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                    children: "User Component"
+                }, void 0, false, {
+                    fileName: "src/components/User.js",
+                    lineNumber: 11,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                    children: [
+                        "Name:",
+                        userName
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/User.js",
+                    lineNumber: 12,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                    children: [
+                        "Contact Number:",
+                        phone
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/User.js",
+                    lineNumber: 13,
+                    columnNumber: 17
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/User.js",
+            lineNumber: 10,
+            columnNumber: 13
+        }, this);
+    }
+}
+exports.default = User;
+
+  $parcel$ReactRefreshHelpers$1070.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
