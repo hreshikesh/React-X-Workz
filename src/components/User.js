@@ -4,6 +4,19 @@ class User extends React.Component {
         super();
         console.log("child constructor")
     }
+
+    componentDidMount() {
+        console.log("child componentDidMount")
+    }
+
+    componentDidUpdate() {
+        console.log("child componentDidUpdate")
+    }
+    componentWillUnmount() {
+        console.log("child componentWillUnmount")
+    }
+
+    
     render() {
         const {userName, phone} = this.props;
         return (

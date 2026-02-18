@@ -28481,6 +28481,9 @@ class User extends (0, _reactDefault.default).Component {
         super();
         console.log("child constructor");
     }
+    componentDidMount() {
+        console.log("child componentDidMount");
+    }
     render() {
         const { userName, phone } = this.props;
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28489,7 +28492,7 @@ class User extends (0, _reactDefault.default).Component {
                     children: "User Component"
                 }, void 0, false, {
                     fileName: "src/components/User.js",
-                    lineNumber: 11,
+                    lineNumber: 17,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
@@ -28499,7 +28502,7 @@ class User extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/User.js",
-                    lineNumber: 12,
+                    lineNumber: 18,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
@@ -28509,13 +28512,13 @@ class User extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "src/components/User.js",
-                    lineNumber: 13,
+                    lineNumber: 19,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/User.js",
-            lineNumber: 10,
+            lineNumber: 16,
             columnNumber: 13
         }, this);
     }

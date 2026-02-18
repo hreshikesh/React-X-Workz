@@ -9,6 +9,7 @@ class Contact extends React.Component {
             count:0,
             increment:100,
             decrement:1,
+            userName:[],
         }
         console.log("This is a parent class constructor") 
     }
@@ -21,6 +22,20 @@ class Contact extends React.Component {
         this.setState({count:this.state.count-this.state.decrement})
     }
 
+    componentDidMount() {
+        console.log("This is a parent class componentDidMount")
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => response.json())
+        .then((data) => this.setState({userName:data.map(user => user.name)}))
+        
+    }
+    componentDidUpdate() {
+        console.log("This is a parent class componentDidUpdate")
+    }
+
+    componentWillUnmount() {
+        console.log("This is a parent class componentWillUnmount")
+    }
     render(){
         return(
             <div>
@@ -38,6 +53,5 @@ class Contact extends React.Component {
             </div>
         )
     }
-
 }
 export default Contact;
